@@ -1,49 +1,225 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-   <title> Home Page</title>
-</head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Yara Chaves' Website</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #ffffff;
+         color: #000000;
+         margin: 0;
+         padding: 0;
+      }
 
+      header {
+         background-color: #000000;
+         padding: 20px;
+         text-align: center;
+      }
+
+      header h1 {
+         color: #ffffff;
+         margin: 0;
+         font-size: 2.5em;
+      }
+
+      nav {
+         background-color: #333;
+         text-align: center;
+         padding: 10px;
+      }
+
+      nav a {
+         color: white;
+         text-decoration: none;
+         padding: 14px 20px;
+         display: inline-block;
+         font-size: 1.1em;
+      }
+
+      nav a:hover {
+         background-color: #555;
+         transition: background-color 0.3s;
+      }
+
+      .section {
+         padding: 40px;
+         max-width: 800px;
+         margin: 40px auto;
+         text-align: center;
+      }
+
+      .section h2 {
+         font-size: 2.2em;
+         color: #333;
+         margin-bottom: 20px;
+      }
+
+      .section p, .section ul {
+         font-size: 1.2em;
+         line-height: 1.6;
+         text-align: left;
+         margin-bottom: 20px;
+      }
+
+      .skills-section ul {
+         list-style-type: square;
+         margin-top: 20px;
+         text-align: left;
+      }
+
+      .skills-section ul li {
+         margin-bottom: 10px;
+      }
+
+      /* Contact Form Styling */
+      .contact-form {
+         padding: 40px;
+         margin-top: 50px;
+         border-radius: 10px;
+         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+         background-color: #f8f8f8;
+         max-width: 600px;
+         margin: 30px auto;
+         text-align: left;
+      }
+
+      .contact-form h2 {
+         text-align: center;
+         margin-bottom: 30px;
+         font-size: 2em;
+         color: #333;
+      }
+
+      .contact-form label {
+         font-size: 1.1em;
+         color: #333;
+      }
+
+      .contact-form input, 
+      .contact-form textarea {
+         width: 100%;
+         padding: 10px;
+         margin-top: 8px;
+         margin-bottom: 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         font-size: 1em;
+         background-color: #fff;
+         box-sizing: border-box;
+      }
+
+      .contact-form input:focus, 
+      .contact-form textarea:focus {
+         border-color: #000;
+         outline: none;
+         background-color: #e6e6e6;
+      }
+
+      .contact-form button {
+         width: 100%;
+         padding: 12px;
+         font-size: 1.2em;
+         color: #fff;
+         background-color: #000000;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s;
+      }
+
+      .contact-form button:hover {
+         background-color: #333333;
+      }
+
+      footer {
+         background-color: #000000;
+         color: #ffffff;
+         text-align: center;
+         padding: 10px;
+         position: relative;
+         width: 100%;
+         bottom: 0;
+         margin-top: 40px;
+      }
+
+   </style>
+</head>
 <body>
 
-<a href="home.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="skills.html">Skills</a>
+<header>
+   <h1>Welcome to Yara Chaves' Personal Website</h1>
+</header>
+
+<nav>
+   <a href="#home">Home</a>
+   <a href="#about">About</a>
+   <a href="#skills">Skills</a>
+   <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<div class="section" id="home">
+   <h2>Hello, I'm Yara Chaves</h2>
+   <p>Welcome to my personal website. Explore more about my skills, experiences, and how to get in touch with me through the menu above.</p>
+</div>
+
+<!-- About Section -->
+<div class="section" id="about">
+   <h2>About Me</h2>
+   <p>
+      Hi, I am Yara Chaves, a University of Salford student currently studying Business Management with Innovation and Technology. 
+   </p>
+   <p>
+      I have a strong passion for business and technology, and I'm constantly exploring ways to integrate the two fields to drive innovation and change. 
+      Through my studies and personal projects, I have developed skills that will help me excel in the ever-evolving business world.
+   </p>
+</div>
+
+<!-- Skills Section -->
+<div class="section skills-section" id="skills">
+   <h2>Skills</h2>
+   <ul>
+      <li>Business Strategy</li>
+      <li>Innovation and Technology Management</li>
+      <li>Project Management</li>
+      <li>Data Analysis</li>
+      <li>UI/UX Design Principles</li>
+      <li>HTML, CSS, and Web Development</li>
+   </ul>
+</div>
+
+<!-- Contact Section -->
+<div class="contact-form" id="contact">
+   <h2>Contact Me</h2>
+
+   <form action="/submit_form" method="POST">
+       <div>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" placeholder="Your name" required>
+       </div>
+
+       <div>
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email" placeholder="Your email" required>
+       </div>
+
+       <div>
+           <label for="message">Message:</label>
+           <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+       </div>
+
+       <div>
+           <button type="submit">Submit</button>
+       </div>
+   </form>
+</div>
+
+<footer>
+   <p>&copy; 2024 Yara Chaves | All Rights Reserved</p>
+</footer>
+
 </body>
-
-<div class="uos-contact-details">
-   <div class="uos-contact-details__aside uos-acc--item">
-<div class="acc-trigger" data-acc-btn tabindex="0">
-<p class="uos-meta uos-meta--reset"> Contact Details</p>
-</div>
-<div class="acc-target" data-acc-content>
-                               <div class="uos-student__email">
-<a href="mailto:y.chaves1@edu.salford.ac.uk">
-Send Email to yara chaves student</a> 
-<p>Student at University of Salford</p>
-</div>
-</div>
-<div class="contact-form">
-<h2>Contact Us</h2>
-<form action="/submit_form" method="POST">
-<div>
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" placeholder="Your name" required>
-</div>
-
-<div>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" placeholder="Your email" required>
-</div>
-
-<div>
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
-</div>
-
-<div>
-<button type="submit">Submit</button>
-</div>
-</div>
-
 </html>
