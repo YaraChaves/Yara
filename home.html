@@ -1,10 +1,10 @@
-<
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Yara Chaves' Website</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <style>
       body {
          font-family: Arial, sans-serif;
@@ -146,6 +146,17 @@
          margin-top: 40px;
       }
 
+      footer a {
+         color: grey; /* Instagram and LinkedIn link color */
+         text-decoration: none;
+         margin: 0 10px; /* Space between icons */
+         font-size: 1.5em; /* Adjust size of icons */
+      }
+
+      footer a:hover {
+         color: #b3b3b3; /* Lighter grey on hover */
+      }
+
       /* Page Display Control */
       .page {
          display: none;
@@ -160,7 +171,7 @@
 <body>
 
 <header>
-   <h1>Welcome to Yara Chaves' Personal Website</h1>
+   <h1>Yara Chaves</h1>
 </header>
 
 <nav>
@@ -205,7 +216,7 @@
 <div class="contact-form page" id="contact">
    <h2>Contact Me</h2>
 
-   <form action="/submit_form" method="POST">
+   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
        <div>
            <label for="name">Name:</label>
            <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -229,7 +240,12 @@
 
 <footer>
    <p>&copy; 2024 Yara Chaves | All Rights Reserved</p>
-   <p>Follow me on <a href="https://www.instagram.com/yarac_haves" target="_blank">Instagram</a></p>
+   <a href="https://www.instagram.com/yarac_haves" target="_blank">
+      <i class="fab fa-instagram"></i>
+   </a>
+   <a href="https://www.linkedin.com/in/yara-chaves-80411a29b/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+   </a>
 </footer>
 
 <script>
